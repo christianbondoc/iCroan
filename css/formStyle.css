@@ -541,7 +541,7 @@ svg{
     }
     .questions{
       height: 100%;
-      width: 100%;
+    
     }
     .questions h3{
   font-size: 4em;
@@ -603,7 +603,8 @@ svg{
       left: 0;
     }
     .questions {
-      width: 100%;
+      height: 100%;
+        overflow: hidden;
     }
     .questions h3{
   font-size: 3em;
