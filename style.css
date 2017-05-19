@@ -149,6 +149,14 @@ svg{
     width: 100%;
     height: auto;
     }
+    #email-wrapper {
+        display: 
+    }
+    html {
+        margin: 0;
+        padding: 0; 
+        overflow: hidden;
+    }
     } 
 /*Logo animation responsive ends*/            
 
@@ -219,7 +227,6 @@ nav ul li {
   display:inline-block;  
   }
 #email-wrapper {
-  width: 100%;
   margin: 20px;
 }
   }
