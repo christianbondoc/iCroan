@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> Name your game </title>
+    <link href="css/formStyle.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+    <div class="site-wrapper" id="site-wrapper">
+        
+        <div class="lockout-questions" id="lockout">
+            <div class="lockout-container">
+                <h3 class="headcol"> Do you wanna play <div id="word">a game?</div> </h3>
+                <button type="button" class="lockout-button" id="lockout-start"> Lets name it </button>
+                <button type="button" class="lockout-button" id="lockout-end" onclick="window.location.href='index.html'">Go back home</button>
+            </div>
+        </div>
+        <div class="site-wrapper-container" id="site-wrapper-container"> 
+<!-- START QUESTION 1-->
+            <div class="questions" id="qOne">
+                <h3 class="questionHeader"> What kind of gamer are you? </h3>
+                <form id="gamerType">
+                    <p class="rdo">
+                        <input type="radio" name="kRadio" id="notGamer" value="1"> Not a gamer 
+                    </p>
+                    <p class="rdo">
+                        <input type="radio" name="kRadio" id="casualGamer" value="2"> Casual gamer 
+                    </p>
+                    <p class="rdo">
+                            <input type="radio" name="kRadio" id="hardcoreGamer" value="3"> Heavy gamer
+                    </p>
+                    <p class="rdo">
+                            <input type="radio" name="kRadio" id="moneyGamer" value="4"> Hardcore gamer
+                    </p> <br>
+                        <button type="button" class="butt" id="forwardQ2">NEXT</button>
+                    <button type="button" class="butt" class="butt" id="refreshButt"> RESET </button>
+                </form>
+                    <img src="assets/img/breadcrumb1.svg" id="bcImg"/>
+            </div>
+<!-- END OF QUESTION 1-->
+<!-- START QUESTION 2 -->
+            <div class="questions" id="qTwo">
+                <h3 class="questionHeader"> What do you like to do</h3>
+                <form id="gamerActivity">
+                    <p class="rdo">
+                        <input type="radio" name="dRadio" id="liveLife" value="1"> Live life to the fullest
+                    </p>
+                    <p class="rdo">
+                        <input type="radio" name="dRadio" id="statLife" value="2"> Simulate suitations
+                    </p>
+                    <p class="rdo">
+                            <input type="radio" name="dRadio" id="balanceLife" value="3"> Compete 
+                    </p>
+                    <p class="rdo">
+                            <input type="radio" name="dRadio" id="noLife" value="4"> Stay in as much as possible
+                    </p> <br>
+                        <button type="button" class="butt" id="forwardQ3">NEXT</button>
+                    <button type="button" class="butt" class="butt" id="backwardsQ1"> BACK </button>
+                </form>
+                    <img src="assets/img/breadcrumb2.svg" id="bcImg"/>
+            </div>
+<!-- END OF QUESTION 2-->
+<!-- START  QUESTION 3-->
+            <div class="questions" id="qThree">
+                <h3 class="questionHeader"> What do you own?</h3>
+                <form id="gamerOwn">
+                    <p class="rdo">
+                        <input type="radio" name="oRadio" id="mobileOwner" value="1"> Mobile
+                    </p>
+                    <p class="rdo">
+                        <input type="radio" name="oRadio" id="consoleOwner" value="2"> Mobile and Console
+                    </p>
+                    <p class="rdo">
+                            <input type="radio" name="oRadio" id="pcOwner" value="3"> Mobile and PC
+                    </p>
+                    <p class="rdo">
+                            <input type="radio" name="oRadio" id="bothOwner" value="4"> Mobile, Console and PC
+                    </p> <br>
+                        <button type="button" class="butt" id="forwardQ4">NEXT</button>
+                    <button type="button" class="butt" class="butt" id="backwardsQ2"> BACK </button>
+                </form>
+                        <img src="assets/img/breadcrumb3.svg" id="bcImg"/>
+            </div>
+<!-- END OF QUESTION 3-->
+<!-- START QUESTION 4 -->
+            <div class="questions" id="qFour">
+                <h3 class="questionHeader"> How long do you play for?</h3>
+                <form id="gamerLength">
+                    <p class="rdo">
+                        <input type="radio" name="lRadio" id="oneHour" value="1"> An hour a week at most
+                    </p>
+                    <p class="rdo">
+                        <input type="radio" name="lRadio" id="threeHour" value="2"> 2-3 Hours a week
+                    </p>
+                    <p class="rdo">
+                            <input type="radio" name="lRadio" id="fourHour" value="3"> 4-5 Hours a week
+                    </p>
+                    <p class="rdo">
+                            <input type="radio" name="lRadio" id="sixHour" value="4"> 6 Hours a day
+                    </p> <br>
+                        <button type="button" class="butt" id="calculate">NAME YO GAME</button>
+                    <button type="button" class="butt" class="butt" id="backwardsQ3"> BACK </button>
+                </form>
+                        <img src="assets/img/breadcrumb4.svg" id="bcImg"/>
+            </div>
+<!-- END QUESTION 4-->
+<!-- START RESUTS --> 
+<div class="container finAnswer" id="finAnswer">
+        <h2 class="questionHeader" id="results"> </h2> <br>
+        <button type="button" class="butt" id="infoButt"> Find out more! </button>
+
+        <h2 class="resultHeader"> Hate your result? </h2> <br>
+        <button type="button" class="butt" id="restartButt"> Restart </button> <br>
+        <img src="assets/img/breadcrumb5.svg" id="bcImg2"/>
+</div>
+        
+</div>
+</div>
+<script src="js/js.js"> </script>
+</body>
+
+</html>

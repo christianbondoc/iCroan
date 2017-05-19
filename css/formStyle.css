@@ -1,0 +1,730 @@
+   @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+        margin: auto;
+        padding: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-image: url("../assets/img/background.svg");
+        color: #FFF;
+        text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+/* Site-Wrapper
+ ------------------------------------------------------------- */
+.site-wrapper{
+  position: absolute;
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+}
+.site-wrapper-container {
+  position: absolute;
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white; 
+  display: none;
+}
+.iCroanLogo {
+        margin: auto;
+        position: absolute;
+        width: 50vw;
+        height: 25vh;
+        background: url("../assets/img/logo.svg") center center no-repeat;
+        bottom: 0;
+        left: 25%;
+        }
+.loaded {
+  opacity: 0;
+  transition: 4s opacity;
+}
+.lockout-questions {
+  position: absolute;
+  margin: auto;
+  background-image: url("../assets/img/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.lockout-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.lockout-button:hover {
+  background-color: #4C9F50
+}
+.lockout-container {
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 50vh;
+  width: 50vw;
+}
+.lockout-container .headcol{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.lockout-container .lockout-button {
+  margin-top: 50px;
+}
+#qOne,
+#qTwo,
+#qThree,
+#qFour,
+#finAnswer{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #302B4A;
+   display: none;
+}
+#finAnswer {
+  text-align: center;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.RDO{
+  font-size: 1.75em;
+  color: white;
+}
+ .headcol{
+  font-size: 2.8em;
+  color: white;
+ }
+ .butt {
+  color: #000;
+  font-size: 2em;
+  margin: 5px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+ }
+ .butt:hover{
+  background-color: #4C9F50
+ }
+.questions{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.questions h3{
+  font-size: 4.5em;
+  text-align: center;
+}
+.questions form {
+  display: table;
+  margin: 5px;
+  width: 100%;
+}
+.questions input{
+  display: table-cell;
+}
+.questions label{
+  display: table-cell;
+}
+.questions p {
+  font-size: 3em;
+  display: table-row;
+}
+.questions button {
+  font-size: 2em;
+  margin: 5px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+}
+.resultHeader h2 {
+}
+
+
+/*  Hello */
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:focus {
+  color: #000;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.btn-default:hover{
+    background-color: #4C9F50
+}
+
+
+
+
+.gameImg {
+  background-size: contain;
+  position: absolute;
+  margin: auto;
+  transition: 3s;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 600px;
+}
+#gameImg {
+  left: -350px;
+  height: 50vh;
+  width: 50vw;
+}
+#gameBG {
+  /* maybe take out */ overflow: hidden;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  margin: auto;
+}
+#info-wrapper {
+  width: auto;
+  display: none;
+}
+.gameName h2{
+  position: relative;
+  margin: auto;
+  font-size: 5em;
+  transition: 3s;
+}
+#iFrame {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 380px;
+  height: 315px;
+  width: 560px;
+  transition: 2s;
+  display: none;
+}
+.gameDesc {
+  transition: 3s ease-in-out;
+  position: relative;
+  margin: auto;
+  background-color: rgba(124,124,124,0.75);
+  width: 700px;
+  height: auto;
+  top: -700px;
+  left: 200px;
+  text-align: center;
+  overflow: hidden;
+}
+#gameParagraph {
+  padding: 5px;
+}
+#gameScore {
+  position: relative;
+  padding: 5px;
+  display: flex;
+}
+#mcScore,
+#ignScore{
+  position: relative;
+  background-color: rgba(62, 62, 62, 0.8);
+  border: 5px solid red;
+  margin: auto;
+  width: 45%;
+  height: 125px;
+}
+
+div#menubg{
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  height: 70px;
+  }
+
+nav {
+  width: 500px;
+  background-color:black;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  margin: auto;
+  }
+
+nav ul li {
+  display:inline-block;  
+  width: 140px;
+  text-align: center;
+  position:relative;
+  left:0;
+  right:0;
+  margin-top: -10px;
+  }
+
+nav a {
+  color:#FFFFFF;
+  display:block;
+  text-decoration: none;
+  padding:20px 30px;    
+  }
+
+nav a:hover {
+  color:#35C789;
+  }
+/*-Menu ends*/ 
+
+/*Menu responsive starts*/
+@media screen and (max-width:480px) {
+nav ul li {
+  margin-left: 20%;
+  display:inline-block;  
+  }
+
+nav a:hover {
+  background-color: #000000;
+  color:#35C789;
+  width: 100%;
+  }
+  }
+
+
+/* Header Info */
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+body.loaded {
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+/*Banner starts*/
+.banner {
+  position: relative;
+  width: 100%;
+  height:300px;
+  overflow: hidden;
+  }
+h2{
+  font-size: 4em;
+}
+.banner .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate3d(0,0,0) scale(1.25);
+  background-image: url(assets/img/minecraft.png);
+  background-size: cover;
+  background-position: center;
+  }
+
+.loaded .banner .background {
+  transform: scale(1);
+  transition: 6.5s transform;
+  }
+/*Banner ends*/
+
+/*Logo animation starts*/         
+svg{           
+    position: absolute;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    z-index: 1;
+    width: 50%;
+    height: auto;
+    animation: float 1.5s infinite ease-in-out alternate;
+    opacity: 1;
+    transform-origin: 0 1px;
+    -webkit-filter: drop-shadow(1px 22px 1px black);
+     filter: drop-shadow(1px 3px px black); 
+    }
+       
+@keyframes float {
+	100% {transform: translateY(15px);}
+    } 
+
+#f1{
+    opacity: 0;
+    animation: blink 2s infinite;
+    }
+#f2{
+    opacity: 0;
+    animation: blink 2.2s infinite;
+    }
+#f3{
+    opacity: 0;
+    animation: blink 2.4s infinite;
+    }
+#f4{
+    opacity: 0;
+    animation: blink 2.6s infinite;
+    }
+#f5{
+    opacity: 0;
+    animation: blink 2.8s infinite;
+    }
+@keyframes blink {
+  0% { opacity: 0; }
+  45% { opacity: 0; }
+  50% { opacity: 0; }
+  80% { opacity: 0; }
+  100% { opacity: 1; }
+}
+#wings{
+    animation: wingsmove 3s infinite;    
+    }
+        
+@keyframes wingsmove {
+    0% { transform: rotate(1.5deg); }
+    50% { transform: rotate(0.1deg); }
+    100% { transform: rotate(1.5deg); }
+    }
+
+#sword{
+   animation: swordmove 0.8s linear infinite alternate-reverse;
+    }  
+
+@keyframes swordmove { 
+   40% {transform: rotatey(-19deg);}
+   100% { transform: translate(-8px); }
+    }
+        
+#mouth{
+    animation: mouthopen 3s linear infinite;
+    animation-delay: 1s;
+    }
+        
+@keyframes mouthopen {
+    0% { transform: translate(); }
+    20% { transform: translate(20px,2px); }
+    }
+    
+/*Logo animation ends*/ 
+
+/*Logo animation responsive starts*/         
+@media screen and (max-width : 1400px){
+    svg, {           
+    width: 100%;
+    position: relative;
+    }
+    .lockout-questions {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: auto;
+    }
+    .infographic .gameDesc {
+      width: 75%;
+      height: 75%;
+      position: relative;
+      top: 0;
+      left: 0;
+      transition: 0s;
+      display: block;
+    }
+
+    .site-wrapper {
+      width: 75%;
+      height: 100%;
+      right: 0;
+      left: 0;
+    }
+
+    #qOne,
+    #qTwo,
+    #qThree,
+    #qFour, {
+      width: 100%;
+      height: 100%;
+    }
+    }
+    .questions{
+        padding: 35px;
+        padding-left:  15%;
+        padding-right: 15%;
+    }
+    .questions h3{
+  font-size: 3.5em;
+  text-align: center;
+}
+  .questions p {
+    font-size: 2.75em;
+    display: table-row;
+  }
+  .questions form {
+    display: table;
+    margin: 5px;
+  }
+  .questions input{
+    display: table-cell;
+  }
+  .questions label{
+    display: table-cell;
+  }
+  .questions button { /* Next/reset */
+    margin: 5px;
+    width: 100%;
+  }
+  .resultHeader h2 {
+    font-size: 1em;
+  }
+/* Media Queries 
+ ------------------------------------------------------------- */
+@media screen and (max-width: 900px) { /* 480-900px */
+     svg, {           
+    width: 100%;
+    height: auto;
+    }
+    .infographic .gameDesc {
+      width: 70%;
+      height: 85%;
+      position: relative;
+      top: 0;
+      left: 0;
+      transition: 0s;
+    }
+    .site-wrapper {
+      width: 75%;
+      height: 100%;
+      right: 0;
+      left: 0;
+    }
+    .questions{
+      height: 100%;
+      width: 100%;
+    }
+    .questions h3{
+  font-size: 4em;
+  text-align: center;
+}
+  .questions form {
+    display: table;
+    margin: 5px;
+  }
+  .questions input{
+    display: table-cell;
+  }
+  .questions label{
+    display: table-cell;
+  }
+  .questions p {
+    font-size: 2em;
+    display: table-row;
+    padding-bottom: 5px;
+  }
+  .questions button {
+    font-size: 2em;
+    margin: 5px;
+    width: 75%;
+  }
+  .questionHeader,
+  .resultHeader {
+    font-size: 3em;
+  }
+    #qOne,
+    #qTwo,
+    #qThree,
+    #qFour, {
+      width: 100%;
+      height: 100%;
+    }
+
+    }  
+
+@media screen and (max-width : 480px){
+  
+    svg, {           
+    width: 100%;
+    height: auto;
+    }
+    .infographic .gameDesc {
+      width: 90%;
+      height: 900%;
+      position: relative;
+      top: 0;
+      left: 0;
+      transition: 0s;
+      overflow: inherit;
+    }
+    .site-wrapper {
+      width: 75%;
+      height: 100%;
+      right: 0;
+      left: 0;
+    }
+    .questions {
+      width: 100%;
+    }
+    .questions h3{
+  font-size: 3em;
+  text-align: center;
+}
+  .questions form {
+    display: table;
+    margin: 5px;
+  }
+  .questions input{
+    display: table-cell;
+  }
+  .questions label{
+    display: table-cell;
+  }
+  .questions p {
+    font-size: 2em;
+    margin: 5px;
+    display: table-row;
+  }
+  .butt button {
+    font-size: 1em;
+    margin: 5px;
+    width: 100%;
+
+  }
+    #qOne,
+    #qTwo,
+    #qThree,
+    #qFour, {
+      width: 100%;
+      height: 100%;
+    }
+    } 
+    img {
+      width: 500px;
+    }
+/*Logo animation responsive ends*/            
+
+/*-Menu starts*/             
+body {
+  font-family: 'Roboto', sans-serif;
+}
+#menubg{
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  height: 70px;
+  }
+
+nav {
+  width: 500px;
+  background-color:black;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  margin: auto;
+  }
+
+nav ul li {
+  display:inline-block;  
+  width: 140px;
+  text-align: center;
+  position:relative;
+  left:0;
+  right:0;
+  margin-top: -10px;
+  }
+
+nav a {
+  color:#FFFFFF;
+  display:block;
+  text-decoration: none;
+  padding:20px 30px;    
+  }
+
+nav a:hover {
+  color:#35C789;
+  }
+/*-Menu ends*/ 
+
+/*Menu responsive starts*/
+@media screen and (max-width:480px) {
+nav ul li {
+  margin-left: 20%;
+  display:inline-block;  
+  }
+
+nav a:hover {
+  background-color: #000000;
+  color:#35C789;
+  width: 100%;
+  }
+  }
+
+
+@media screen and (max-width:1440px) {
+nav ul li {
+  display:inline-block;  
+  }
+#email-wrapper {
+  width: 100%;
+  margin: 20px;
+}
+  }
+
+/*Menu responsive ends*/
+
+#bcImg {
+  position: relative;
+  height: 30vh;
+  width: 30vw;
+  margin: auto;
+  left: 25%;
+  padding-top: 50px;
+}
+#bcImg2 {
+  position: relative;
+  height: 30vh;
+  width: 30vw;
+  margin: auto;
+  padding-top: 50px;
+}

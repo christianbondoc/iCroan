@@ -1,0 +1,65 @@
+.gameImg {
+  background-size: contain;
+  position: absolute;
+  margin: auto;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 600px;
+}
+#gameImg {
+  left: -350px;
+  height: 50vh;
+  width: 50vw;
+}
+#gameBG {
+  /* maybe take out */ overflow: hidden;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  margin: auto;
+}
+
+.gameName h2{
+  position: relative;
+  margin: auto;
+  font-size: 5em;
+}
+#iFrame {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 380px;
+  height: 315px;
+  width: 560px;
+  display: none;
+}
+.gameDesc {
+  transition: 3s ease-in-out;
+  position: relative;
+  margin: auto;
+  background-color: rgba(124,124,124,0.75);
+  width: 700px;
+  height: auto;
+  top: -700px;
+  left: 200px;
+  text-align: center;
+  overflow: hidden;
+}
+#gameParagraph {
+  padding: 5px;
+}
+#gameScore {
+  position: relative;
+  padding: 5px;
+  display: flex;
+}
+#mcScore,
+#ignScore{
+  position: relative;
+  background-color: rgba(62, 62, 62, 0.8);
+  border: 5px solid red;
+  margin: auto;
+  width: 45%;
+  height: 125px;
+}

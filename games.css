@@ -1,0 +1,434 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+ /* Better box-sizing */
+* { box-sizing: border-box; }
+
+
+html {height: 100%;}
+
+body { 
+  margin: 0; 
+  opacity: 0;
+  background-color: black;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  height: 100%;
+  
+}
+
+body.loaded {
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+/*Banner starts*/
+.banner {
+  position: relative;
+  width: 100%;
+  height:300px;
+  overflow: hidden;
+  }
+
+.banner .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate3d(0,0,0) scale(1.25);
+  background-image: url(minecraft.png);
+  background-size: cover;
+  background-position: center;
+  }
+
+.loaded .banner .background {
+  transform: scale(1);
+  transition: 6.5s transform;
+  }
+/*Banner ends*/
+
+/*Logo animation starts*/         
+svg#logosvg{           
+    position: absolute;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    z-index: 1;
+    width: 50%;
+    height: auto;
+    animation: float 1.5s infinite ease-in-out alternate;
+    opacity: 1;
+    transform-origin: 0 1px;
+    -webkit-filter: drop-shadow(1px 22px 1px black);
+     filter: drop-shadow(1px 3px px black); 
+    }
+       
+@keyframes float {
+	100% {transform: translateY(15px);}
+    } 
+
+#f1{
+    opacity: 0;
+    animation: blink 2s infinite;
+    }
+#f2{
+    opacity: 0;
+    animation: blink 2.2s infinite;
+    }
+#f3{
+    opacity: 0;
+    animation: blink 2.4s infinite;
+    }
+#f4{
+    opacity: 0;
+    animation: blink 2.6s infinite;
+    }
+#f5{
+    opacity: 0;
+    animation: blink 2.8s infinite;
+    }
+@keyframes blink {
+  0% { opacity: 0; }
+  45% { opacity: 0; }
+  50% { opacity: 0; }
+  80% { opacity: 0; }
+  100% { opacity: 1; }
+}
+#wings{
+    animation: wingsmove 3s infinite;    
+    }
+        
+@keyframes wingsmove {
+    0% { transform: rotate(1.5deg); }
+    50% { transform: rotate(0.1deg); }
+    100% { transform: rotate(1.5deg); }
+    }
+
+#sword{
+   animation: swordmove 0.8s linear infinite alternate-reverse;
+    }  
+
+@keyframes swordmove { 
+   40% {transform: rotatey(-19deg);}
+   100% { transform: translate(-8px); }
+    }
+        
+#mouth{
+    animation: mouthopen 3s linear infinite;
+    animation-delay: 1s;
+    }
+        
+@keyframes mouthopen {
+    0% { transform: translate(); }
+    20% { transform: translate(20px,2px); }
+    }
+    }
+/*Logo animation ends*/ 
+
+/*Logo animation responsive starts*/         
+@media screen and (max-width : 1400px){
+    svg{           
+    width: 100%;
+    position: relative;
+    }
+    }
+    
+@media screen and (max-width: 720px) {
+     svg{           
+    width: 100%;
+    height: auto;
+    }
+    }  
+   
+@media screen and (max-width : 480px){
+  
+    svg{           
+    width: 100%;
+    height: auto;
+    }
+    #gameBG{
+    top:420px;
+    }
+    } 
+/*Logo animation responsive ends*/            
+
+/*-Menu starts*/             
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+  }
+
+div#menubg{
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  height: 70px;
+  }
+
+nav {
+  width: 500px;
+  background-color:black;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  margin: auto;
+  }
+
+nav ul li {
+  display:inline-block;  
+  width: 140px;
+  text-align: center;
+  position:relative;
+  left:0;
+  right:0;
+  margin-top: -10px;
+  }
+
+nav a {
+  color:#FFFFFF;
+  display:block;
+  text-decoration: none;
+  padding:20px 30px;    
+  }
+
+nav a:hover {
+  color:#35C789;
+  }
+/*-Menu ends*/ 
+
+/*Menu responsive starts*/
+@media screen and (max-width:480px) {
+nav ul li {
+  margin-left: 20%;
+  display:inline-block;  
+  }
+
+nav a:hover {
+  background-color: #000000;
+  color:#35C789;
+  width: 100%;
+  }
+  }
+
+
+@media screen and (max-width:1440px) {
+nav ul li {
+  display:inline-block;  
+  }
+#email-wrapper {
+  width: 100%;
+  margin: 20px;
+}
+}
+
+/*Menu responsive ends*/
+
+/*footer starts*/
+div#footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  background-color: black;
+  color:white;
+  text-align: center;
+  font-size: 12px;
+    transform: translate(0, 1100px);
+}
+/*footer ends*/
+
+@keyframes cloudsdmove { 
+   40% {transform: rotatey(-19deg);}
+   100% { transform: translate(-8px); }
+    }
+
+@media screen and (max-width:1400px) {
+div#footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  background-color: black;
+  color:white;
+  text-align: center;
+  font-size: 12px;
+  transform: translate(0, 1700px);
+} 
+  }
+
+@media screen and (max-width:1300px) {
+div#footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  background-color: black;
+  color:white;
+  text-align: center;
+  font-size: 12px;
+  transform: translate(0, 1600px);
+} 
+  }
+
+@media screen and (max-width:1280px) {
+div#footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  background-color: black;
+  color:white;
+  text-align: center;
+  font-size: 12px;
+  transform: translate(0, 1100px);
+} 
+  }
+
+
+@media screen and (max-width: 320px) {
+div#footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  background-color: black;
+  color:white;
+  text-align: center;
+  font-size: 12px;
+  transform: translate(0, 5px);
+} 
+
+}
+
+@media screen and (max-width: 400px) {
+div#footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  background-color: black;
+  color:white;
+  text-align: center;
+  font-size: 12px;
+  transform: translate(0, 1400px);
+} 
+
+svg#logosvg{
+    width: 100%;
+    height: auto;
+    }
+}
+
+.gameImg {
+  
+  background-size: contain;
+  position: static;
+  margin: auto;
+  background-repeat: no-repeat;
+    max-height: 500px;
+  width: 100%;
+}
+#gameImg {
+ 
+  height: 80vh;
+  width: 100%;
+}
+#gameBG {
+  /* maybe take out */ 
+  background-size: cover;
+  height: 110vh;
+  width: 100%;
+  position: absolute;
+  margin: auto;
+  margin-top:60px;
+}
+
+.gameName h2{
+  position: relative;
+  margin: auto;
+  font-size: 5em;
+  padding: 20px;
+  margin-top: 250px
+}
+#iFrame {
+  position: static;
+  margin: auto;
+  margin-left:20%;
+  top: 850px;
+  height: 315px;
+  width: 560px;
+  display: none;
+}
+.gameDesc {
+  margin-left:40%;
+  position: static;
+  color: white;
+  width: 70%;
+  text-align: center;
+  font-family:'Roboto', sans-serif;
+  display: block;
+  box-sizing: border-box;
+  background-color: black;
+}
+#gameParagraph {
+  padding: 5px;
+  position: relative;
+}
+#gameScore {
+  position: relative;
+  padding: 5px;
+  display: flex;
+}
+.Score{
+  position: relative;
+  border: 5px ;
+  margin: auto;
+  width: 50%;
+  height: 125px; 
+    background-repeat: no-repeat;
+    background-position: center;  
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+#owMeta{
+    background-image: url(owMeta.svg);
+}
+#owIGN{
+    background-image: url(owIGN.svg);
+}
+#civMeta{
+    background-image: url(civMeta.svg);
+}
+#civIGN{
+    background-image: url(civIGN.svg);
+}
+#stardewMeta{
+    background-image: url(stardewMeta.svg);
+}
+#stardewIGN{
+    background-image: url(stardewIGN.svg);
+}
+#wowMeta{
+    background-image: url(wowMeta.svg);
+}
+#wowIGN{
+    background-image: url(wowIGN.svg);
+}
+
+h3{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
